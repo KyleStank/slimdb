@@ -4,15 +4,12 @@
   "description": "SlimDB is an efficient and lightweight JSON database library.",
   "main": "./lib/index.js",
   "module": "./lib/index.es.js",
-  "jsnext:main": "./lib/index.es.js",
-  "files": [
-    "/lib"
-  ],
+  "typings": "./lib/index.d.ts",
   "scripts": {
-    "build": "npm-run-all clean lint build:rollup",
+    "build": "npm-run-all lint test clean build:rollup",
     "build:rollup": "rollup -c",
     "clean": "rimraf lib",
-    "lint": "tsc --noEmit && eslint ./src --ext .ts,.d.ts",
+    "lint": "tsc --noEmit && eslint ./src --ext .ts,.spec.ts,.d.ts",
     "test": "mocha -r ts-node/register src/**/*.spec.ts"
   },
   "author": "Kyle Stankovich",
