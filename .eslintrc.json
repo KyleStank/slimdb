@@ -1,0 +1,113 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "rules": {
+    // Errors
+    "indent": [
+      "error",
+      2
+    ],
+    "quotes": [ "error", "single" ],
+    "semi": [ "error", "always" ],
+    "brace-style": [
+      "error",
+      "1tbs",
+      {
+        "allowSingleLine": false
+      }
+    ],
+    "curly": [ "error", "all" ],
+    "keyword-spacing": [ "error" ],
+    "block-spacing": [ "error" ],
+    "new-parens": [ "error" ],
+    "arrow-body-style": [ "error", "always" ],
+    "arrow-parens": [ "error", "always" ],
+    "arrow-spacing": [ "error" ],
+    "no-confusing-arrow": [
+      "error",
+      {
+        "allowParens": false
+      }
+    ],
+    "prefer-arrow-callback": [
+      "error",
+      {
+        "allowUnboundThis": false
+      }
+    ],
+    "func-style": [
+      "error",
+      "expression",
+      {
+        "allowArrowFunctions": true
+      }
+    ],
+    "func-call-spacing": [ "error" ],
+    "function-call-argument-newline": [ "error", "consistent" ],
+    "no-invalid-this": [ "error" ],
+    "object-shorthand": [ "error", "never" ],
+    "default-param-last": [ "error" ],
+    "eqeqeq": [ "error", "always" ],
+    "no-else-return": [
+      "error",
+      {
+        "allowElseIf": false
+      }
+    ],
+    "no-empty-function": [ "error" ],
+    "camelcase": [ "error" ],
+    "comma-dangle": [ "error", "never" ],
+    "eol-last": [ "error" ],
+    "no-lonely-if": [ "error" ],
+    "@typescript-eslint/interface-name-prefix": [
+      "error",
+      {
+        "prefixWithI": "always"
+      }
+    ],
+
+    // Warnings
+    "no-unused-vars": [ "warn" ],
+    "key-spacing": [
+      "warn",
+      {
+        "align": "value"
+      }
+    ],
+    "no-var": [ "warn" ],
+    "prefer-const": [ "warn" ],
+    "vars-on-top": [ "warn" ],
+    "consistent-return": [ "warn" ],
+    "block-scoped-var": [ "warn" ],
+    "no-alert": [ "warn" ],
+    "capitalized-comments": [ "warn" ],
+    "object-curly-newline": [
+      "warn",
+      {
+        "ObjectExpression": {
+          "multiline": true,
+          "minProperties": 1
+        },
+        "ObjectPattern": {
+          "multiline": true,
+          "minProperties": 1
+        }
+      }
+    ]
+  }
+}

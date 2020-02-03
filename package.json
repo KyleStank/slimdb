@@ -1,0 +1,39 @@
+{
+  "name": "slimdb",
+  "version": "0.0.1",
+  "description": "SlimDB is an efficient and lightweight JSON database library.",
+  "main": "./lib/index.js",
+  "module": "./lib/index.es.js",
+  "jsnext:main": "./lib/index.es.js",
+  "files": [
+    "/lib"
+  ],
+  "scripts": {
+    "build": "npm-run-all clean lint build:rollup",
+    "build:rollup": "rollup -c",
+    "clean": "rimraf lib",
+    "lint": "tsc --noEmit && eslint ./src --ext .ts,.d.ts",
+    "test": "mocha -r ts-node/register src/**/*.spec.ts"
+  },
+  "author": "Kyle Stankovich",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "@types/chai": "^4.2.8",
+    "@types/mocha": "^7.0.1",
+    "@types/node": "^13.5.0",
+    "@typescript-eslint/eslint-plugin": "^2.17.0",
+    "@typescript-eslint/parser": "^2.17.0",
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "mocha": "^7.0.1",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.0",
+    "rollup": "^1.29.1",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-typescript2": "^0.25.3",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
+  }
+}
