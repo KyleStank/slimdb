@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 
-import { Common } from './Common';
+import { Common } from '../src/Common';
 
 describe(`${__dirname}/Common.ts (class)`, () => {
   it('Should properly check if strings are empty.', () => {

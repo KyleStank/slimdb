@@ -9,8 +9,8 @@
     "build": "npm-run-all lint test clean build:rollup",
     "build:rollup": "rollup -c",
     "clean": "rimraf lib",
-    "lint": "tsc --noEmit && eslint ./src --ext .ts,.spec.ts,.d.ts",
-    "test": "mocha -r ts-node/register src/**/*.spec.ts"
+    "lint": "tsc --noEmit && eslint ./src ./tests --ext .ts,.spec.ts,.d.ts",
+    "test": "mocha -r ts-node/register tests/**/*.spec.ts"
   },
   "author": "Kyle Stankovich",
   "license": "GPL-3.0-or-later",
