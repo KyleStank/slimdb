@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 
-import { IO } from './IO';
+import { IO } from '../src/IO';
 
 interface ITestWriteData {
   firstName: string;
