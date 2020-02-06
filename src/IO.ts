@@ -22,6 +22,9 @@ export class IO {
    */
   static readFile(filePath: string): string {
     if (!IO.exists(filePath)) {
+      // TODO: Implement error below.
+      // eslint-disable-next-line
+      // throw new Error(`Cannot read file [${filePath}] because it doesn't exist!`);
       return '';
     }
 
@@ -37,7 +40,7 @@ export class IO {
    */
   static writeFile<T extends object>(filePath: string, json: T): boolean {
     if ((filePath === null || filePath === undefined) || (json === null || json === undefined)) {
-      return false;
+      throw new Error(`Cannot write file because path [${filePath}] isn't valid!`);
     }
 
     // Write data to the file.
@@ -54,7 +57,7 @@ export class IO {
    */
   static deleteFile(filePath: string): boolean {
     if (!IO.exists(filePath)) {
-      return false;
+      throw new Error(`Cannot delete file [${filePath}] because it doesn't exist!`);
     }
 
     // Delete the file!

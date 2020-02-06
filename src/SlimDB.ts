@@ -28,7 +28,7 @@ export class SlimDB<T extends object> {
 
   public update(callback: Function): void {
     if (typeof(callback) !== typeof(Function())) {
-      return;
+      throw new Error('Cannot update data without a valid callback!');
     }
 
     // Invoke callback.
