@@ -62,5 +62,5 @@
     // "declarationDir": "lib"                /* Output directory for generated declaration files. */
   },
 
-  "exclude": [ "node_modules", "tests", "lib" ]
+  "exclude": [ "node_modules", "tests", "docs", "lib" ]
 }
