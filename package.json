@@ -1,6 +1,6 @@
 {
   "name": "slimdb",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "SlimDB is an efficient and lightweight JSON database library.",
   "main": "./lib/index.js",
   "module": "./lib/index.es.js",
